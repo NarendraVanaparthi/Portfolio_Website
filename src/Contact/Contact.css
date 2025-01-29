@@ -1,0 +1,121 @@
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px; /* Consistent padding across sections */
+  background-color: #000000; /* Black background color for dark mode */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text for section title in dark mode */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out; /* Consistent fade-in animation */
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #ccc; /* Light grey color for subtitle in dark mode */
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out; /* Consistent fade-in animation */
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Consistent gap between items */
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out; /* Consistent fade-up animation */
+}
+
+/* Contact Item */
+.contact-item {
+  background-color: #222222; /* Dark background for contact items in dark mode */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Dark mode shadow */
+  width: 250px; /* Width to match the other cards */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Dark mode hover effect */
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #ffffff; /* White color for icons in dark mode */
+  margin-bottom: 10px;
+}
+
+.contact-item span {
+  font-size: 1rem;
+  color: #fff; /* White text color for details in dark mode */
+}
+
+/* Light Mode Styles */
+.dark-mode .contact-section {
+  background-color: #ffffff; /* White background for light mode */
+}
+
+.dark-mode .section-title {
+  color: #007bff; /* Blue text for section title in light mode */
+}
+
+.dark-mode .section-subtitle {
+  color: #666; /* Grey color for subtitle in light mode */
+}
+
+.dark-mode .contact-item {
+  background-color: #ffffff; /* White background for contact items in light mode */
+  color: #333; /* Dark text color for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light mode shadow */
+}
+
+.dark-mode .contact-item span {
+  color: #333; /* Dark text color for details in light mode */
+}
+
+.dark-mode .contact-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Light mode hover effect */
+}
+
+.dark-mode .contact-icon {
+  color: #007bff; /* Blue icons in light mode */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .contact-item {
+    width: 100%; /* Full width for mobile screens */
+  }
+}
